@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/design_system/text_field_default.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -25,31 +27,19 @@ class HomePage extends StatelessWidget {
                   fontSize: 40,
                 ),
               ),
-              const SizedBox(height: 14),
-              TextField(
-                onChanged: (value) {},
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.person),
-                  labelText: 'Email',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                ),
+              const SizedBox(height: 30),
+              const TextFieldDefault(
+                prefixIcon: Icons.person,
+                hintText: 'Email',
+                keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 14),
-              TextField(
-                onChanged: (value) {},
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: 'Senha',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                ),
+              const TextFieldDefault(
+                keyboardType: TextInputType.text,
+                suffixIcon: Icons.visibility,
+                prefixIcon: Icons.lock,
+                hintText: 'Senha',
+                obscureText: true,
               ),
               const SizedBox(height: 14),
               const Row(
@@ -71,7 +61,7 @@ class HomePage extends StatelessWidget {
                 onPressed: null,
                 child: const Text(
                   'Entrar',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ],
