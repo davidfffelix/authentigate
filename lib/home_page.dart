@@ -48,7 +48,9 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Esqueceu sua senha?',
                     style: TextStyle(
-                        fontWeight: FontWeight.w900, color: Colors.white),
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                    ),
                   )
                 ],
               ),
@@ -61,7 +63,9 @@ class HomePage extends StatelessWidget {
                 onPressed: null,
                 child: const Text(
                   'Entrar',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                    color: Color(0xff0D47A1),
+                  ),
                 ),
               ),
             ],
